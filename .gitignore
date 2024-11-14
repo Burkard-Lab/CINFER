@@ -1,5 +1,10 @@
+# Shiny Dependencies ######################
 /packrat
 /rsconnect
-.DS_Store
 manifest.json
+
+# Large Files ######################
 res/CINFERbasev1.0.sqlite
+
+# OS Artifacts #####################
+.DS_Store
