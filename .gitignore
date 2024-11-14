@@ -1,0 +1,5 @@
+/packrat
+/rsconnect
+.DS_Store
+manifest.json
+res/CINFERbasev1.0.sqlite
