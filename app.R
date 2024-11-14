@@ -298,8 +298,8 @@ ui <- fluidPage(
                              class = "align-text-top fs-6"),
                  card_body_fill(
                  a(strong("the paper"), href="https://elifesciences.org/articles/69799"),
-                 a(strong("the code"), href="https://github.com/andrewrlynch/CINFER"),
-                 a(strong("the Burkard Lab"), href="https://www.medicine.wisc.edu/hematology-oncology/welcome-burkard-research-group")
+                 a(strong("the code"), href="https://github.com/Burkard-Lab/CINFER"),
+                 a(strong("the Burkard Lab"), href="https://github.com/Burkard-Lab")
                  ),
                  class="shadow-sm p-0 mb-3 bg-body rounded"
               )
