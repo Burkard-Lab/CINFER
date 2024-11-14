@@ -5,6 +5,7 @@ manifest.json
 
 # Large Files ######################
 res/CINFERbasev1.0.sqlite
+"res/NetLogo 6.3.0"
 
 # OS Artifacts #####################
 .DS_Store
