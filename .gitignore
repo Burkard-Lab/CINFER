@@ -3,6 +3,9 @@
 /rsconnect
 manifest.json
 
+# R Artifacts ######################
+.Rhistory
+
 # Large Files ######################
 res/CINFERbasev1.0.sqlite
 "res/NetLogo 6.3.0"
