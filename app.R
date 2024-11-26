@@ -98,10 +98,13 @@ ui <- fluidPage(
               "),
   tags$head(
     HTML("<title>CINFER</title>"),
-    tags$link(rel="shortcut icon", type="image/x-icon", href="res/favicon.ico")),
+    tags$link(rel="shortcut icon", type="image/x-icon", href="www/favicon.ico")),
   theme = bslib::bs_theme(bootswatch = "simplex"),
   chooseSliderSkin("Flat"),
-  div(titlePanel(title = div(strong(h1('CINFER', style="margin: 0; font-weight: bold; color: rgba(219, 46, 46, 0.8);")), h6('scDNA-based Estimation of Mis-segregation Rates', style="margin: 0;"))), style = "position:sticky;  position: -webkit-sticky; /* Safari */;top: 32px; min-height: 128px;"),
+  div(
+    titlePanel(title = div(img(src='CINFERLogo.svg', height = "64px", width = "auto", align = "left"), strong(h1('CINFER', style="margin: 0; font-weight: bold; color: rgba(219, 46, 46, 0.8);")), h6('scDNA-based Estimation of Mis-segregation Rates', style="margin: 0;"))), style = "position:sticky;  position: -webkit-sticky; /* Safari */;top: 32px; min-height: 128px;"
+    ),
+  
   sidebarLayout(
 
 ## Side Bar ----------------------------------------------------------------
@@ -289,17 +292,21 @@ ui <- fluidPage(
                     card_header(strong("About"),
                                 class = "align-text-top fs-6"),
               card_body(
-                    p("CINFER is used to infer the rate of chromosome mis-segregation occuring in a sample directly from scDNAseq data, accounting for ongoing karyotype selection. CINFER uses an ", a(href = "https://cran.r-project.org/web/packages/abc/vignettes/abcvignette.pdf", "R implementation of Approximate Bayesian Computation"), " to make these inferences from a computational model of CIN developed in ", a(href="https://ccl.northwestern.edu/netlogo/", "NetLogo."), "We have shown that this method can recall experimentally observed mis-segregation rates as well as those most likely to have resulted in the karyotype diversity observed in patient-derived clinical samples.")
+                    p("CINFER is used to infer the rate of chromosome mis-segregation occuring in a sample directly from scDNAseq data, accounting for ongoing karyotype selection. CINFER uses an ", a(href = "https://cran.r-project.org/web/packages/abc/vignettes/abcvignette.pdf", "R implementation of Approximate Bayesian Computation"), " to make these inferences from a computational model of CIN developed in ", a(href="https://ccl.northwestern.edu/netlogo/", "NetLogo.")), 
+                    p("We have shown that this method can recall experimentally observed mis-segregation rates as well as those most likely to have resulted in the karyotype diversity observed in patient-derived clinical samples."),
+                    p("This web version of CINFER implements a model of stabilizing karyotype selection that selects against cells with imbalanced karyotypes."),
+                    p("If you use CINFER, kindly cite:"),
+                    code("Lynch, Andrew R., Nicholas L. Arp, Amber S. Zhou, Beth A. Weaver, and Mark E. Burkard. Quantifying chromosomal instability from intratumoral karyotype diversity using agent-based modeling and Bayesian inference. Elife 11 (2022): e69799.")
                         ),
               class="shadow-sm p-0 mb-3 bg-body rounded"
                  ),
               card(
-                 card_header(strong("Bring me to..."),
+                 card_header(strong("More Information"),
                              class = "align-text-top fs-6"),
                  card_body_fill(
-                 a(strong("the paper"), href="https://elifesciences.org/articles/69799"),
-                 a(strong("the code"), href="https://github.com/Burkard-Lab/CINFER"),
-                 a(strong("the Burkard Lab"), href="https://github.com/Burkard-Lab")
+                 a(strong("The Paper"), href="https://elifesciences.org/articles/69799"),
+                 a(strong("The Code"), href="https://github.com/Burkard-Lab/CINFER"),
+                 a(strong("The Burkard Lab"), href="https://github.com/Burkard-Lab")
                  ),
                  class="shadow-sm p-0 mb-3 bg-body rounded"
               )
